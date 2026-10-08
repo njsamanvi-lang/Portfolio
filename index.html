@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Samanvi N J, Software Engineer showcasing scalable full-stack projects, technical architecture, and engineering expertise.">
+  <meta name="author" content="Samanvi N J">
+  <title>Samanvi N J | Software Engineer Portfolio</title>
+
+  <!-- Google Fonts: Modern & Clean Typography (Outfit & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= MOBILE TOP HEADER BAR (< 992px) ================= -->
+  <header class="mobile-top-bar" id="mobile-top-bar" aria-label="Mobile Navigation Bar">
+    <div class="mobile-bar-brand">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        &lt;<span>Samanvi</span> /&gt;
+      </a>
+    </div>
+    <div class="mobile-bar-actions">
+      <!-- Mobile Theme Toggle -->
+      <button id="mobile-theme-toggle" class="theme-mini-btn" aria-label="Toggle dark mode" type="button">
+        <span class="icon-sun" aria-hidden="true">&#9728;</span>
+        <span class="icon-moon" aria-hidden="true" style="display:none;">&#9790;</span>
+      </button>
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle-btn" class="mobile-menu-toggle" aria-expanded="false" aria-controls="sidebar-nav" aria-label="Open navigation menu" type="button">
+        <span aria-hidden="true">&#9776;</span>
+        <span>Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- ================= LEFT VERTICAL NAVIGATION BAR ================= -->
+  <aside id="sidebar-nav" class="clean-sidebar" aria-label="Main Navigation">
+    
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <div class="sidebar-brand-wrapper">
+        <a href="#hero" class="sidebar-brand" aria-label="Home page">
+          <div class="brand-avatar-mini" aria-hidden="true">S</div>
+          <div class="brand-text-block">
+            <span class="brand-name">Samanvi N J</span>
+            <span class="brand-role">Software Engineer</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Close Button (Mobile Only) -->
+      <button id="sidebar-close-btn" class="sidebar-close-btn" aria-label="Close menu" type="button">
+        &times;
+      </button>
+
+      <!-- Status Pill -->
+      <div class="sidebar-status-pill">
+        <span class="status-pulse-dot" aria-hidden="true"></span>
+        <span>Available for Roles</span>
+      </div>
+    </div>
+
+    <!-- Navigation Menu Items -->
+    <nav class="sidebar-nav-container">
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#hero" class="nav-item active" data-section="hero" aria-current="page">
+            <span class="nav-icon" aria-hidden="true">&#9032;</span>
+            <span class="nav-label">Home</span>
+            <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="nav-item" data-section="about">
+            <span class="nav-icon" aria-hidden="true">&#9786;</span>
+            <span class="nav-label">About Me</span>
+            <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#skills" class="nav-item" data-section="skills">
+            <span class="nav-icon" aria-hidden="true">&#9889;</span>
+            <span class="nav-label">Skills</span>
+            <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#timeline" class="nav-item" data-section="timeline">
+            <span class="nav-icon" aria-hidden="true">&#8987;</span>
+            <span class="nav-label">Timeline</span>
+            <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#projects" class="nav-item" data-section="projects">
+            <span class="nav-icon" aria-hidden="true">&#127918;</span>
+            <span class="nav-label">Projects</span>
+            <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#testimonials" class="nav-item" data-section="testimonials">
+            <span class="nav-icon" aria-hidden="true">&#9733;</span>
+            <span class="nav-label">Testimonials</span>
+            <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#chat" class="nav-item" data-section="chat">
+            <span class="nav-icon" aria-hidden="true">&#128172;</span>
+            <span class="nav-label">Chat</span>
+            <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-item" data-section="contact">
+            <span class="nav-icon" aria-hidden="true">&#9993;</span>
+            <span class="nav-label">Contact</span>
+            <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer: Night Mode Toggle -->
+    <div class="sidebar-footer">
+      <div class="theme-toggle-wrap">
+        <button id="theme-toggle" class="clean-theme-toggle" aria-label="Toggle night mode" type="button" aria-pressed="false">
+          <span class="theme-toggle-label">Night Mode</span>
+          <div class="toggle-switch-track" aria-hidden="true">
+            <div class="toggle-switch-thumb"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ================= MAIN CONTENT WRAPPER ================= -->
+  <div class="main-wrapper">
+    <main id="main-content">
+
+      <!-- ================= HERO SECTION ================= -->
+      <section id="hero" class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-container">
+          
+          <!-- Hero Text -->
+          <div class="hero-text-content">
+            <div class="hero-badge">
+              <span>👋 Hello, I'm</span>
+            </div>
+
+            <h1 id="hero-title" class="hero-title">
+              Samanvi N J<br>
+              <span class="gradient-text">Software Engineer</span>
+            </h1>
+
+            <p class="hero-tagline">
+              Crafting scalable distributed architectures, robust backend systems, and modern interactive web experiences with clean, thoughtful engineering.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">Explore Projects</a>
+              <a href="RESUME.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Download Resume</a>
+              <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+          </div>
+
+          <!-- Hero Portrait Card -->
+          <div class="hero-visual">
+            <div class="hero-avatar-card">
+              <div class="hero-img-wrapper">
+                <img src="PROFESSIONAL PICTURE.jpeg" alt="Professional portrait of Samanvi N J" width="360" height="380">
+              </div>
+              <div class="avatar-caption">
+                <span class="caption-name">Samanvi N J</span>
+                <span class="caption-tag">Full-Stack &amp; Systems</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ME SECTION ================= -->
+      <!-- Clean, minimalistic design with profile image, bio, career highlights, and personal interests -->
+      <section id="about" class="section about-section" aria-labelledby="about-title">
+        <div class="section-container">
+          
+          <div class="section-header">
+            <span class="section-tag">Who I Am</span>
+            <h2 id="about-title" class="section-title">About Me</h2>
+            <p class="section-subtitle">A glimpse into my background, engineering philosophies, and the drive to build impactful software.</p>
+          </div>
+
+          <div class="about-grid">
+            
+            <!-- Profile Image Column -->
+            <div class="about-image-card">
+              <div class="about-photo-wrapper">
+                <img src="PROFESSIONAL PICTURE.jpeg" alt="Samanvi N J - Software Engineer Portrait" width="360" height="400">
+              </div>
+              <div class="about-photo-meta">
+                <span class="meta-name">Samanvi N J</span>
+                <span class="meta-role">Software Engineer &bull; Full-Stack Builder</span>
+              </div>
+            </div>
+
+            <!-- Bio & Details Column -->
+            <div class="about-text-column">
+              <p class="bio-lead">
+                Hello! I'm <strong>Samanvi N J</strong>, a software engineer dedicated to building resilient distributed systems, intuitive digital interfaces, and high-performance applications from the ground up.
+              </p>
+
+              <div class="bio-paragraphs">
+                <p>
+                  My engineering journey is driven by curiosity, analytical depth, and an obsession with clean architecture. I bridge the gap between robust backend mechanics and refined frontend interactions, translating complex business requirements into elegant, maintainable code.
+                </p>
+                <p>
+                  Whether architecting microservices, optimizing database transactions, or designing modern responsive web applications, I prioritize performance, testability, and developer experience.
+                </p>
+              </div>
+
+              <!-- Two Column Feature Cards: Career Highlights & Personal Interests -->
+              <div class="about-features-grid">
+                
+                <!-- Career Highlights -->
+                <div class="about-feature-box">
+                  <div class="feature-box-header">
+                    <span class="feature-box-icon">&#128640;</span>
+                    <h3 class="feature-box-title">Career Highlights</h3>
+                  </div>
+                  <ul class="feature-list">
+                    <li>Led end-to-end full-stack architectures from spec to production rollout.</li>
+                    <li>Designed high-throughput RESTful and GraphQL APIs with sub-second latencies.</li>
+                    <li>Built automated CI/CD deployment pipelines using Docker and cloud infrastructure.</li>
+                    <li>Mentored peers and championed rigorous code reviews, unit testing, and design documentation.</li>
+                  </ul>
+                </div>
+
+                <!-- Personal Interests -->
+                <div class="about-feature-box">
+                  <div class="feature-box-header">
+                    <span class="feature-box-icon">&#128161;</span>
+                    <h3 class="feature-box-title">Personal Interests</h3>
+                  </div>
+                  <ul class="feature-list">
+                    <li>Exploring distributed systems papers, concurrency patterns, and cloud scaling.</li>
+                    <li>Contributing to open-source developer tooling and developer productivity utilities.</li>
+                    <li>Algorithmic challenges, computational problem-solving, and strategic chess.</li>
+                    <li>UI design systems, minimal aesthetics, and typography craft.</li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!-- Fast Metric Cards -->
+              <div class="about-stats-bar">
+                <div class="stat-card">
+                  <span class="stat-number">Full-Stack</span>
+                  <span class="stat-desc">Core Discipline</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number">B.E.</span>
+                  <span class="stat-desc">Computer Science &amp; Eng.</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number">Scalable</span>
+                  <span class="stat-desc">Systems Design</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number">Open</span>
+                  <span class="stat-desc">To Opportunities</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= SKILLS SECTION (FROM RESUME) ================= -->
+      <!-- Comprehensive technical toolkit and soft skills extracted directly from Samanvi N J's resume -->
+      <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+        <div class="section-container">
+          
+          <div class="section-header">
+            <span class="section-tag">Capabilities &amp; Competencies</span>
+            <h2 id="skills-title" class="section-title">Skills</h2>
+            <p class="section-subtitle">Comprehensive technical toolkit, programming proficiencies, concepts, tools, and interpersonal strengths from my resume.</p>
+          </div>
+
+          <!-- Skills Filter Buttons -->
+          <div class="skills-filter-nav" role="tablist" aria-label="Skills filter">
+            <button class="filter-btn active" data-filter="all" type="button">All Skills</button>
+            <button class="filter-btn" data-filter="tech" type="button">Technical Skills</button>
+            <button class="filter-btn" data-filter="languages" type="button">Languages (Java, C, Python)</button>
+            <button class="filter-btn" data-filter="core" type="button">Core Concepts (OOP, DSA)</button>
+            <button class="filter-btn" data-filter="tools" type="button">Database &amp; Tools (MySQL, Git)</button>
+            <button class="filter-btn" data-filter="web" type="button">Web (HTML, CSS, JS)</button>
+            <button class="filter-btn" data-filter="emerging" type="button">Specialized (AI Agents, GIS)</button>
+            <button class="filter-btn" data-filter="soft" type="button">Soft Skills</button>
+          </div>
+
+          <!-- Skills Grid -->
+          <div class="skills-grid" id="tech-skills-grid">
+            
+            <!-- Category 1: Programming Languages -->
+            <div class="skill-category-card" data-cat="languages">
+              <div class="skill-cat-header">
+                <span class="skill-cat-icon">&#9881;</span>
+                <h3 class="skill-cat-title">Programming Languages</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Java</span>
+                    <span class="skill-percent">Proficient</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">C</span>
+                    <span class="skill-percent">Strong Foundation</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percent">Applied &amp; AI</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 86%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 2: Core Concepts -->
+            <div class="skill-category-card" data-cat="core">
+              <div class="skill-cat-header">
+                <span class="skill-cat-icon">&#129504;</span>
+                <h3 class="skill-cat-title">Core Concepts</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Object-Oriented Programming (OOP)</span>
+                    <span class="skill-percent">Advanced</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Data Structures</span>
+                    <span class="skill-percent">Core Logic</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 3: Database & Tools -->
+            <div class="skill-category-card" data-cat="tools">
+              <div class="skill-cat-header">
+                <span class="skill-cat-icon">&#128420;</span>
+                <h3 class="skill-cat-title">Database &amp; Tools</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">MySQL</span>
+                    <span class="skill-percent">Relational Queries</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 84%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Git &amp; GitHub</span>
+                    <span class="skill-percent">Version Control</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Git Bash</span>
+                    <span class="skill-percent">CLI Navigation</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 4: Web Technologies -->
+            <div class="skill-category-card" data-cat="web">
+              <div class="skill-cat-header">
+                <span class="skill-cat-icon">&#128421;</span>
+                <h3 class="skill-cat-title">Web Technologies</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">HTML5</span>
+                    <span class="skill-percent">Semantic Markup</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">CSS3</span>
+                    <span class="skill-percent">Responsive Layouts</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percent">DOM &amp; Interactivity</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 5: Other Specialized Technologies -->
+            <div class="skill-category-card" data-cat="emerging">
+              <div class="skill-cat-header">
+                <span class="skill-cat-icon">&#128640;</span>
+                <h3 class="skill-cat-title">Other Technologies</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">AI Agents</span>
+                    <span class="skill-percent">Intelligent Automation</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 82%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">GIS (Geographic Information Systems)</span>
+                    <span class="skill-percent">Spatial Mapping</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Satellite Data Analysis</span>
+                    <span class="skill-percent">Remote Sensing</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 78%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Soft Skills Subsection -->
+          <div class="subsection-divider" id="soft-skills-divider">
+            <span class="section-tag">Interpersonal &amp; Leadership</span>
+            <h3 class="subsection-title">Soft Skills</h3>
+            <p class="section-subtitle" style="margin-bottom: 2rem;">Core human competencies, communication, and leadership skills highlighted in my resume.</p>
+          </div>
+
+          <div class="soft-skills-grid" id="soft-skills-grid">
+            
+            <!-- Soft Skill 1: Problem Solving -->
+            <article class="soft-skill-card" data-cat="soft">
+              <div class="soft-card-top">
+                <span class="soft-skill-badge">Analytical</span>
+                <span class="soft-skill-rate">Core Strength</span>
+              </div>
+              <h3 class="soft-skill-title">Problem Solving</h3>
+              <p class="soft-skill-desc">
+                Approaches technical roadblocks and engineering constraints with methodical decomposition, algorithmic reasoning, and creative solution building.
+              </p>
+              <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+              <div class="soft-tags-list">
+                <span class="soft-tag">Root-Cause Analysis</span>
+                <span class="soft-tag">Structured Thinking</span>
+                <span class="soft-tag">Practical Debugging</span>
+              </div>
+            </article>
+
+            <!-- Soft Skill 2: Analytical Thinking -->
+            <article class="soft-skill-card" data-cat="soft">
+              <div class="soft-card-top">
+                <span class="soft-skill-badge">Evaluation</span>
+                <span class="soft-skill-rate">Key Competency</span>
+              </div>
+              <h3 class="soft-skill-title">Analytical Thinking</h3>
+              <p class="soft-skill-desc">
+                Evaluates system flows, sensor data, and technical trade-offs objectively to extract actionable insights and optimize project outcomes.
+              </p>
+              <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+              <div class="soft-tags-list">
+                <span class="soft-tag">Data Interpretation</span>
+                <span class="soft-tag">Critical Assessment</span>
+                <span class="soft-tag">System Logic</span>
+              </div>
+            </article>
+
+            <!-- Soft Skill 3: Leadership -->
+            <article class="soft-skill-card" data-cat="soft">
+              <div class="soft-card-top">
+                <span class="soft-skill-badge">Ownership</span>
+                <span class="soft-skill-rate">Active Practice</span>
+              </div>
+              <h3 class="soft-skill-title">Leadership</h3>
+              <p class="soft-skill-desc">
+                Takes proactive initiative across academic and technical projects, coordinating goals, driving milestones forward, and supporting peers.
+              </p>
+              <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+              <div class="soft-tags-list">
+                <span class="soft-tag">Project Initiative</span>
+                <span class="soft-tag">Milestone Guidance</span>
+                <span class="soft-tag">Accountability</span>
+              </div>
+            </article>
+
+            <!-- Soft Skill 4: Teamwork -->
+            <article class="soft-skill-card" data-cat="soft">
+              <div class="soft-card-top">
+                <span class="soft-skill-badge">Collaboration</span>
+                <span class="soft-skill-rate">Synergy</span>
+              </div>
+              <h3 class="soft-skill-title">Teamwork</h3>
+              <p class="soft-skill-desc">
+                Collaborates actively within multidisciplinary groups, sharing knowledge, listening to diverse viewpoints, and unifying team efforts.
+              </p>
+              <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+              <div class="soft-tags-list">
+                <span class="soft-tag">Collaborative Building</span>
+                <span class="soft-tag">Peer Feedback</span>
+                <span class="soft-tag">Positive Synergy</span>
+              </div>
+            </article>
+
+            <!-- Soft Skill 5: Communication -->
+            <article class="soft-skill-card" data-cat="soft">
+              <div class="soft-card-top">
+                <span class="soft-skill-badge">Clarity</span>
+                <span class="soft-skill-rate">Essential</span>
+              </div>
+              <h3 class="soft-skill-title">Communication</h3>
+              <p class="soft-skill-desc">
+                Articulates technical concepts, project roadmaps, and presentation findings clearly and concisely across both written and verbal mediums.
+              </p>
+              <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+              <div class="soft-tags-list">
+                <span class="soft-tag">Clear Articulation</span>
+                <span class="soft-tag">Documentation</span>
+                <span class="soft-tag">Active Listening</span>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= EDUCATION TIMELINE (FROM RESUME) ================= -->
+      <!-- Exact academic milestones extracted directly from resume -->
+      <section id="timeline" class="section timeline-section" aria-labelledby="timeline-title">
+        <div class="section-container">
+          
+          <div class="section-header">
+            <span class="section-tag">Academic Background</span>
+            <h2 id="timeline-title" class="section-title">Education Timeline</h2>
+            <p class="section-subtitle">Chronological record of formal education and academic credentials from my resume.</p>
+          </div>
+
+          <div class="timeline-list">
+
+            <!-- Education 1 -->
+            <article class="timeline-entry">
+              <div class="timeline-point" aria-hidden="true"></div>
+              <span class="timeline-date">2025 &mdash; 2029</span>
+              <h3 class="timeline-role">Bachelor of Engineering (B.E.)</h3>
+              <p class="timeline-org">Adichunchanagiri Institute of Technology</p>
+              <p class="timeline-body">
+                Pursuing undergraduate engineering with an active focus on Computer Science, Object-Oriented Programming, Data Structures, Database Management, and emerging systems. CGPA: 5.
+              </p>
+            </article>
+
+            <!-- Education 2 -->
+            <article class="timeline-entry">
+              <div class="timeline-point" aria-hidden="true"></div>
+              <span class="timeline-date">2024</span>
+              <h3 class="timeline-role">2nd PUC</h3>
+              <p class="timeline-org">Shree Aurobindo PU College</p>
+              <p class="timeline-body">
+                Completed Pre-University Certificate coursework with strong foundations in mathematics and science. Score: <strong>70%</strong>.
+              </p>
+            </article>
+
+            <!-- Education 3 -->
+            <article class="timeline-entry">
+              <div class="timeline-point" aria-hidden="true"></div>
+              <span class="timeline-date">2023</span>
+              <h3 class="timeline-role">10th Standard (SSLC)</h3>
+              <p class="timeline-org">Deeksha Vidya Mandir (State)</p>
+              <p class="timeline-body">
+                Completed secondary school education with academic excellence. Score: <strong>72%</strong>.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS SECTION (FROM RESUME) ================= -->
+      <!-- Dedicated Projects section featuring all 3 real projects from Samanvi N J's resume -->
+      <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+        <div class="section-container">
+          
+          <div class="section-header">
+            <span class="section-tag">From Resume</span>
+            <h2 id="projects-title" class="section-title">Projects</h2>
+            <p class="section-subtitle">Real-world engineering projects and prototypes demonstrating technical skills, IoT hardware, and AI systems directly from my resume.</p>
+          </div>
+
+          <!-- Project Filters -->
+          <div class="skills-filter-nav" role="tablist" aria-label="Projects filter">
+            <button class="filter-btn project-filter-btn active" data-filter="all" type="button">All Projects (3)</button>
+            <button class="filter-btn project-filter-btn" data-filter="iot" type="button">IoT &amp; Hardware</button>
+            <button class="filter-btn project-filter-btn" data-filter="ai" type="button">AI &amp; Environmental</button>
+            <button class="filter-btn project-filter-btn" data-filter="web" type="button">Web &amp; Dashboards</button>
+          </div>
+
+          <!-- Projects Grid Container -->
+          <div class="projects-grid" id="projects-grid">
+
+            <!-- Project 1: IoT-Based Smart Dustbin -->
+            <article class="project-card" data-category="iot">
+              <div>
+                <div class="project-top-row">
+                  <span class="project-badge">IoT &bull; Smart City</span>
+                  <span class="project-status">● Completed</span>
+                </div>
+                <h3 class="project-title">IoT-Based Smart Dustbin</h3>
+                <p class="project-category">Embedded Systems &amp; Waste Management</p>
+                <p class="project-desc">
+                  Developed an intelligent smart dustbin leveraging IoT technology to continuously monitor waste levels and improve municipal waste collection efficiency.
+                </p>
+                <div class="project-impact-line">
+                  <strong>Key Implementation:</strong> Used ultrasonic sensors paired with a microcontroller to detect dustbin fill levels and trigger real-time waste-level alerts for timely garbage collection.
+                </div>
+                
+                <div class="skills-applied-box">
+                  <span class="skills-applied-title">Skills Applied From Resume:</span>
+                  <ul class="project-tags">
+                    <li>IoT Technology</li>
+                    <li>Ultrasonic Sensors</li>
+                    <li>Microcontrollers (C/Embedded)</li>
+                    <li>Real-time Monitoring</li>
+                    <li>Smart Alerts</li>
+                  </ul>
+                </div>
+              </div>
+              <footer class="project-card-footer">
+                <a href="#contact" class="btn btn-primary">Inquire About Project</a>
+                <a href="RESUME.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View in Resume</a>
+              </footer>
+            </article>
+
+            <!-- Project 2: CropShield AI -->
+            <article class="project-card" data-category="ai">
+              <div>
+                <div class="project-top-row">
+                  <span class="project-badge">AI &bull; Agriculture</span>
+                  <span class="project-status">● Prototype</span>
+                </div>
+                <h3 class="project-title">CropShield AI</h3>
+                <p class="project-category">AI-Powered Agricultural &amp; Soil Monitoring</p>
+                <p class="project-desc">
+                  Developed a working prototype designed to monitor soil moisture, soil temperature, and real-time environmental conditions to protect crop health.
+                </p>
+                <div class="project-impact-line">
+                  <strong>Key Implementation:</strong> Integrated sensor-based environmental monitoring to collect and analyze real-time agricultural information, supporting data-driven crop yield management.
+                </div>
+
+                <div class="skills-applied-box">
+                  <span class="skills-applied-title">Skills Applied From Resume:</span>
+                  <ul class="project-tags">
+                    <li>AI Agents</li>
+                    <li>Python</li>
+                    <li>Soil Moisture Sensors</li>
+                    <li>Environmental Analytics</li>
+                    <li>Agricultural Tech</li>
+                  </ul>
+                </div>
+              </div>
+              <footer class="project-card-footer">
+                <a href="#contact" class="btn btn-primary">Inquire About Project</a>
+                <a href="RESUME.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View in Resume</a>
+              </footer>
+            </article>
+
+            <!-- Project 3: Smart Parking System -->
+            <article class="project-card" data-category="iot web">
+              <div>
+                <div class="project-top-row">
+                  <span class="project-badge">IoT &bull; Smart Mobility</span>
+                  <span class="project-status">● Dashboard &amp; Hardware</span>
+                </div>
+                <h3 class="project-title">Smart Parking System</h3>
+                <p class="project-category">Arduino / ESP32 &amp; Web Dashboard</p>
+                <p class="project-desc">
+                  Developed an automated smart parking system engineered to detect available and occupied parking spaces in real time.
+                </p>
+                <div class="project-impact-line">
+                  <strong>Key Implementation:</strong> Deployed sensors interfaced with Arduino/ESP32 microcontrollers to track parking-slot status, accompanied by a dedicated web/mobile dashboard displaying vacant spaces.
+                </div>
+
+                <div class="skills-applied-box">
+                  <span class="skills-applied-title">Skills Applied From Resume:</span>
+                  <ul class="project-tags">
+                    <li>Arduino / ESP32</li>
+                    <li>IoT Proximity Sensors</li>
+                    <li>Web Dashboard</li>
+                    <li>HTML5 / CSS3 / JS</li>
+                    <li>Real-time Telemetry</li>
+                  </ul>
+                </div>
+              </div>
+              <footer class="project-card-footer">
+                <a href="#contact" class="btn btn-primary">Inquire About Project</a>
+                <a href="RESUME.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View in Resume</a>
+              </footer>
+            </article>
+
+          </div>
+
+          <!-- Add Project Form Card -->
+          <div class="add-project-card">
+            <div class="add-project-header">
+              <h3 class="add-project-title">+ Add New Project</h3>
+              <p class="add-project-subtitle">Submit another project to dynamically append it to your portfolio showcase.</p>
+            </div>
+
+            <form id="add-project-form" class="modern-form" action="#" onsubmit="event.preventDefault();">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="new-proj-title">Project Title *</label>
+                  <input type="text" id="new-proj-title" placeholder="e.g. AI Satellite Map Analyzer" required>
+                </div>
+                <div class="form-group">
+                  <label for="new-proj-category">Category *</label>
+                  <select id="new-proj-category" required>
+                    <option value="iot">IoT &amp; Hardware</option>
+                    <option value="ai">AI &amp; Environmental</option>
+                    <option value="web">Web &amp; Dashboard</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="new-proj-tech">Skills Applied / Tech Stack (comma separated) *</label>
+                  <input type="text" id="new-proj-tech" placeholder="e.g. Python, GIS, Satellite Data, MySQL" required>
+                </div>
+                <div class="form-group">
+                  <label for="new-proj-impact">Impact / Key Feature</label>
+                  <input type="text" id="new-proj-impact" placeholder="e.g. Analyzes real-time crop NDVI metrics">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="new-proj-desc">Project Description *</label>
+                <textarea id="new-proj-desc" rows="3" placeholder="Brief summary of how the project functions..." required></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="new-proj-demo">Live Demo / Reference Link (optional)</label>
+                  <input type="text" id="new-proj-demo" placeholder="e.g. https://example.com" value="#">
+                </div>
+                <div class="form-group">
+                  <label for="new-proj-github">Code Repo / Resume Link (optional)</label>
+                  <input type="text" id="new-proj-github" placeholder="e.g. RESUME.pdf" value="RESUME.pdf">
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <button type="submit" class="btn btn-primary">+ Append to Projects</button>
+                <span id="add-proj-success" style="font-weight: 500; font-size: 0.9rem; color: var(--accent-emerald);"></span>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= TESTIMONIALS SECTION ================= -->
+      <section id="testimonials" class="section testimonials-section" aria-labelledby="testimonials-title">
+        <div class="section-container">
+          
+          <div class="section-header">
+            <span class="section-tag">Endorsements</span>
+            <h2 id="testimonials-title" class="section-title">Testimonials</h2>
+            <p class="section-subtitle">Feedback and endorsements from engineering leads, colleagues, and product managers.</p>
+          </div>
+
+          <div class="testimonials-grid">
+
+            <article class="testimonial-card">
+              <div>
+                <div class="stars-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-quote">
+                  &ldquo;Samanvi is an extraordinary engineer who brings both high-velocity execution and exceptional architectural rigor to the team. Her code is always immaculate, reliable, and thoroughly tested.&rdquo;
+                </p>
+              </div>
+              <div class="author-block">
+                <span class="author-name">Engineering Lead</span>
+                <span class="author-title">Tech Innovation Labs</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div>
+                <div class="stars-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-quote">
+                  &ldquo;Collaborating with Samanvi was a pleasure. Her capacity to understand complex requirements and translate them into intuitive, blazing-fast interfaces is second to none.&rdquo;
+                </p>
+              </div>
+              <div class="author-block">
+                <span class="author-name">Senior Product Manager</span>
+                <span class="author-title">Cloud Systems Corp</span>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= CHAT SECTION ================= -->
+      <section id="chat" class="section chat-section" aria-labelledby="chat-title">
+        <div class="section-container">
+          
+          <div class="section-header">
+            <span class="section-tag">Interactive</span>
+            <h2 id="chat-title" class="section-title">Terminal Chat</h2>
+            <p class="section-subtitle">Ask questions directly about my technical experience, architecture background, or availability.</p>
+          </div>
+
+          <div class="chat-terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <span class="terminal-title">samanvi_assistant.sh</span>
+            </div>
+            <div class="terminal-body" id="chat-messages" aria-live="polite">
+              <div class="chat-bubble bot-bubble">
+                Hello! I am Samanvi's portfolio assistant. Feel free to ask about her technical stack, past projects, or download her resume!
+              </div>
+            </div>
+            <form class="terminal-input-bar" id="chat-form" action="#" onsubmit="event.preventDefault();">
+              <input type="text" id="chat-input" placeholder="Type a message (e.g. 'projects', 'resume', 'skills')..." aria-label="Terminal chat input">
+              <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Send</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= CONTACT SECTION ================= -->
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <div class="section-container">
+          
+          <div class="section-header">
+            <span class="section-tag">Get in Touch</span>
+            <h2 id="contact-title" class="section-title">Contact</h2>
+            <p class="section-subtitle">Have an open role, exciting project, or technical question? Feel free to connect!</p>
+          </div>
+
+          <div class="contact-container">
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <div class="contact-card-box">
+                <div class="contact-icon">&#9993;</div>
+                <div>
+                  <h3 style="font-size: 1rem; font-weight: 700;">Email</h3>
+                  <a href="mailto:njsamanvi@gmail.com" style="color: var(--accent-primary); font-size: 0.95rem;">njsamanvi@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-card-box">
+                <div class="contact-icon">&#128222;</div>
+                <div>
+                  <h3 style="font-size: 1rem; font-weight: 700;">Phone</h3>
+                  <a href="tel:+916362149577" style="color: var(--accent-primary); font-size: 0.95rem;">+91 6362149577</a>
+                </div>
+              </div>
+              <div class="contact-card-box">
+                <div class="contact-icon">&#9873;</div>
+                <div>
+                  <h3 style="font-size: 1rem; font-weight: 700;">Location</h3>
+                  <p style="color: var(--text-muted); font-size: 0.95rem;">Chikmagalur / Bangalore, Karnataka (Open to Remote &amp; On-Site)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form class="modern-form" action="#" method="POST" style="background: var(--bg-card); padding: 2rem; border-radius: 20px; border: 1px solid var(--border-subtle); box-shadow: var(--card-shadow);">
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" placeholder="your.email@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="4" placeholder="Your message..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="site-footer">
+      <div class="footer-container">
+        <p class="footer-copy">&copy; 2026 Samanvi N J. All rights reserved.</p>
+        
+        <nav class="social-links" aria-label="Social Links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+        </nav>
+
+        <a href="#hero" class="back-to-top" aria-label="Back to top">&uarr; Back to Top</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Interactive Script -->
+  <script src="script.js"></script>
+</body>
+</html>
